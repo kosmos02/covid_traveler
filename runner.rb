@@ -1,6 +1,12 @@
 require_relative 'config/environment'
 
-Cli.new.start_game
+app = Cli.new
+
+app.welcome
+
+app.get_name
+
+app.ask_scene
 
 
-
+#puts "hello, world!"
