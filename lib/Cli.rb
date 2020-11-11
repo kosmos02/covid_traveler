@@ -19,13 +19,14 @@ class Cli
     end
 
     def ask_scene
-        @scene_selection = prompt.select("What's your scene?", %w(beach mountain metro country-side))
+        @scene_selection = prompt.select("What's your scene?", %w(beach mountain desert country-side), symbols: { marker: "🌎"})
         #input (symbols: {marker: ">"}) later
     end
 
     def ask_budget
-        @budget = prompt.select("On a scale of 1 to 10 how much are you willing to spend? 1 = staycation, 10 = YOLO", %w(1 2 3 4 5 6 7 8 9 10) )
+        @budget = prompt.slider("What's your budget? 1 = staycation, 10 = YOLO", max: 10, step: 1, symbols: { bullet: "💰"})
     end
+
 
     def display_by_name display
         cities = display.pluck(:city)
@@ -34,7 +35,7 @@ class Cli
     end
 
     def select_by_budget
-        Destination.where budget: @budget
+        Destination.where(budget: @budget).or(Destination.where(budget: @budget +1)).or(Destination.where(budget: @budget -1))
     end
 
     def select_by_scene
@@ -51,13 +52,13 @@ class Cli
     end 
 
     def pick_destination_by_budget_scene
-        final_selection = Destination.where budget: @budget, scene: @scene_selection
+        final_selection = Destination.where(budget: @budget, scene: @scene_selection).or(Destination.where(budget: @budget +1, scene: @scene_selection)).or(Destination.where(budget: @budget -1, scene: @scene_selection))
         display_by_name(final_selection)
     end
 
     #menu
     #Select_destination_by_budget
-    #Improve Budget
+      #Improve Budget
     #Select By scene
     #Select x-references
     #Browse by destination
