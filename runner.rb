@@ -16,7 +16,7 @@ app.welcome
 
 
 #puts "hello, world!"
+app.main_menu
 
-
-binding.pry
+#binding.pry
 0
