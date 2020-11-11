@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_10_223954) do
+ActiveRecord::Schema.define(version: 2020_11_11_180922) do
+
+  create_table "activities", force: :cascade do |t|
+    t.string "name"
+    t.string "mood"
+  end
+
+  create_table "catalogs", force: :cascade do |t|
+    t.integer "activities_id"
+    t.integer "destinations_id"
+    t.index ["activities_id"], name: "index_catalogs_on_activities_id"
+    t.index ["destinations_id"], name: "index_catalogs_on_destinations_id"
+  end
 
   create_table "destinations", force: :cascade do |t|
     t.string "city"
