@@ -19,7 +19,7 @@ class Cli
     end
 
     def ask_scene
-        @scene_selection = prompt.select("What's your scene?", %w(beach mountain metro wilderness))
+        @scene_selection = prompt.select("What's your scene?", %w(beach mountain metro country-side))
         #input (symbols: {marker: ">"}) later
     end
 
@@ -55,6 +55,14 @@ class Cli
         display_by_name(final_selection)
     end
 
+    #menu
+    #Select_destination_by_budget
+    #Improve Budget
+    #Select By scene
+    #Select x-references
+    #Browse by destination
+    
+    #exit
 
 
 end
