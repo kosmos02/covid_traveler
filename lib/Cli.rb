@@ -6,6 +6,9 @@ class Cli
         @prompt = TTY::Prompt.new
         @scene_selection = ''
         @budget = nil
+        @final_destination = ''
+        @cityname = ''
+        @final_selection = nil
     end
 
     def welcome
@@ -36,11 +39,11 @@ class Cli
     end
 
     def select_by_budget
-        Destination.where(budget: @budget).or(Destination.where(budget: @budget +1)).or(Destination.where(budget: @budget -1))
+        @final_selection = Destination.where(budget: @budget).or(Destination.where(budget: @budget +1)).or(Destination.where(budget: @budget -1))
     end
 
     def select_by_scene
-        Destination.where scene: @scene_selection
+        @final_selection = Destination.where scene: @scene_selection
     end
 
     def display_destinations_by_budget
@@ -52,34 +55,20 @@ class Cli
     end 
 
     def select_by_budget_scene
-        final_selection = Destination.where(budget: @budget, scene: @scene_selection).or(Destination.where(budget: @budget +1, scene: @scene_selection)).or(Destination.where(budget: @budget -1, scene: @scene_selection))
-        display_by_name(final_selection)
+        @final_selection = Destination.where(budget: @budget, scene: @scene_selection).or(Destination.where(budget: @budget +1, scene: @scene_selection)).or(Destination.where(budget: @budget -1, scene: @scene_selection))
+    end
+
+    def cityname_giver
+         @cityname = prompt.select("Please select your city", @final_selection.pluck(:city))
     end
     
-
-    def destination_names
-        prompt.select("Please select your city", Destination.all.pluck(:city))
+    def find_destination_by_city_name
+        @final_destination = Destination.find_by city: @cityname
     end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def destination_activities
+        prompt.select("These are your activities", @final_destination.activities.pluck(:name))
+    end
 
     def main_exit
         choice = prompt.select('Would you like to exit or go back to the main menu?', %w(main_menu exit))
@@ -96,17 +85,26 @@ class Cli
             if selection == "select by budget"
                 ask_budget
                 select_by_budget
-                display_destinations_by_budget
+                cityname_giver
+                find_destination_by_city_name
+                destination_activities
+#                display_destinations_by_budget
                 main_exit
             elsif selection == "select by scene"
                 ask_scene
                 select_by_scene
-                display_destinations_by_scene
+                cityname_giver
+                find_destination_by_city_name
+                destination_activities
+#                display_destinations_by_scene
                 main_exit
             elsif selection == "select by budget scene"
                 ask_scene
                 ask_budget
                 select_by_budget_scene
+                cityname_giver                
+                find_destination_by_city_name
+                destination_activities
                 main_exit
             elsif selection == "browse all destinations"
                 display_all_destinations
@@ -114,7 +112,6 @@ class Cli
             elsif selection == "exit"
                 puts "Thank you for using Covid Traveler to search your destination"
             end
-            binding.pry
     end
 
 
