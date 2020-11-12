@@ -9,14 +9,16 @@ class Cli
         @final_destination = ''
         @cityname = ''
         @final_selection = nil
-        @font = TTY::Font.new(:starwars)
+        @starwars = TTY::Font.new(:starwars)
+        @doom = TTY::Font.new(:standard, letter_spacing: 13)
         @pastel = Pastel.new 
     end
 
     def welcome
-        puts @pastel.yellow(@font.write("COVID"))
-        puts @pastel.red(@font.write("Traveler"))
-        puts "Welcome to Covid Traveler!!!"
+        puts @pastel.yellow(@doom.write("COVID"))
+        puts @pastel.red(@starwars.write("Traveler"))
+        puts @pastel.bright_blue('Welcome to Covid Traveler!!!')
+        puts @pastel.bright_blue("We're here to help you find your next destination during these unprecedented times.")
     end
 
     def get_name
@@ -25,20 +27,11 @@ class Cli
     end
 
     def ask_scene
-        @scene_selection = prompt.select("What's your scene?", %w(beach mountain desert country-side), symbols: { marker: "🌎"})
+        @scene_selection = prompt.select(@pastel.green("What's your scene?"), %w(beach mountain desert country-side), symbols: { marker: "🌎"})
     end
 
     def ask_budget
-        @budget = prompt.slider("What's your budget? 1 = staycation, 10 = YOLO", max: 10, step: 1, symbols: { bullet: "💰"})
-    end
-
-    def display_by_name display
-        cities = display.pluck(:city)
-        cities.each {|city| puts "#{city}"}
-    end
-
-    def display_all_destinations
-        display_by_name(Destination.all)
+        @budget = prompt.slider(@pastel.green("What's your budget? 1 = staycation, 10 = YOLO"), max: 10, step: 1, symbols: { bullet: "💰"})
     end
 
     def select_by_budget
@@ -49,20 +42,16 @@ class Cli
         @final_selection = Destination.where scene: @scene_selection
     end
 
-    def display_destinations_by_budget
-        display_by_name select_by_budget
-    end
-
-    def display_destinations_by_scene
-        display_by_name select_by_scene
-    end 
-
     def select_by_budget_scene
         @final_selection = Destination.where(budget: @budget, scene: @scene_selection).or(Destination.where(budget: @budget +1, scene: @scene_selection)).or(Destination.where(budget: @budget -1, scene: @scene_selection))
     end
 
+    def select_all_destinations
+        @final_selection = Destination.all
+    end
+
     def cityname_giver
-         @cityname = prompt.select("Please select your city", @final_selection.pluck(:city))
+         @cityname = prompt.select(@pastel.green("Please select your city"), @final_selection.pluck(:city), symbols: { marker: "🌎"})
     end
     
     def find_destination_by_city_name
@@ -70,14 +59,14 @@ class Cli
     end
 
     def destination_activities
-        puts "These are your activities."
+        puts @pastel.bright_yellow("These are the popular activities at #{@cityname}!!!")
         @final_destination.activities.pluck(:name).map do |name|
-            puts name
+            puts @pastel.bright_cyan(name)
         end
     end
 
     def main_exit
-        choice = prompt.select('Would you like to exit or go back to the main menu?', %w(main_menu exit))
+        choice = prompt.select(@pastel.green('Would you like to exit or go back to the main menu?'), %w(main_menu exit))
             if choice == "main_menu"
                 main_menu
             else choice == "exit"
@@ -85,40 +74,58 @@ class Cli
             end
     end
 
-        
-    def main_menu
-        selection = prompt.select("What would you like to do?", {"filter by budget" => 'select by budget', "filter by scene" => 'select by scene', "Help me decide?!" => 'select by budget scene', "browse destination" => "browse all destinations", "exit" => "exit"})
-            if selection == "select by budget"
+    def select_by_budget_tree
                 ask_budget
                 select_by_budget
                 cityname_giver
                 find_destination_by_city_name
                 destination_activities
                 main_exit
-            elsif selection == "select by scene"
-                ask_scene
-                select_by_scene
-                cityname_giver
-                find_destination_by_city_name
-                destination_activities
-                main_exit
-            elsif selection == "select by budget scene"
-                ask_scene
-                ask_budget
-                select_by_budget_scene
-                cityname_giver                
-                find_destination_by_city_name
-                destination_activities
-                main_exit
-            elsif selection == "browse all destinations"
-                display_all_destinations
-                main_exit
-            elsif selection == "exit"
-                puts "Thank you for using Covid Traveler to search your destination"
-            end
     end
 
+    def select_by_scene_tree
+        ask_scene
+        select_by_scene
+        cityname_giver
+        find_destination_by_city_name
+        destination_activities
+        main_exit
+    end
 
+    def select_by_scene_and_budget_tree
+        ask_scene
+        ask_budget
+        select_by_budget_scene
+        cityname_giver                
+        find_destination_by_city_name
+        destination_activities
+        main_exit
+    end
 
+    def select_all_destinations_tree
+        select_all_destinations
+        cityname_giver
+        find_destination_by_city_name
+        destination_activities
+        main_exit
+    end
 
+        
+    def main_menu
+        selection = prompt.select(
+            @pastel.green("What would you like to do?"), 
+                {"filter by budget" => select_by_budget_tree, 
+                "filter by scene" => select_by_scene_tree, 
+                "Help me decide?!" => select_by_scene_and_budget_tree,
+                 "browse destination" => select_all_destinations_tree,
+                  "exit" => "exit"}, symbols: { marker: "🌎"}
+                  )
+ #               puts @pastel.bright_blue("Thank you for using Covid Traveler to search your destination")
+
+    end
+
+    def itinerary_menu
+        #View destination
+        #
+    end
 end
