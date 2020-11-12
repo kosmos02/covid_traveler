@@ -9,9 +9,13 @@ class Cli
         @final_destination = ''
         @cityname = ''
         @final_selection = nil
+        @font = TTY::Font.new(:starwars)
+        @pastel = Pastel.new 
     end
 
     def welcome
+        puts @pastel.yellow(@font.write("COVID"))
+        puts @pastel.red(@font.write("Traveler"))
         puts "Welcome to Covid Traveler!!!"
     end
 
@@ -22,7 +26,6 @@ class Cli
 
     def ask_scene
         @scene_selection = prompt.select("What's your scene?", %w(beach mountain desert country-side), symbols: { marker: "🌎"})
-        #input (symbols: {marker: ">"}) later
     end
 
     def ask_budget
@@ -67,7 +70,10 @@ class Cli
     end
 
     def destination_activities
-        prompt.select("These are your activities", @final_destination.activities.pluck(:name))
+        puts "These are your activities."
+        @final_destination.activities.pluck(:name).map do |name|
+            puts name
+        end
     end
 
     def main_exit
@@ -88,7 +94,6 @@ class Cli
                 cityname_giver
                 find_destination_by_city_name
                 destination_activities
-#                display_destinations_by_budget
                 main_exit
             elsif selection == "select by scene"
                 ask_scene
@@ -96,7 +101,6 @@ class Cli
                 cityname_giver
                 find_destination_by_city_name
                 destination_activities
-#                display_destinations_by_scene
                 main_exit
             elsif selection == "select by budget scene"
                 ask_scene
@@ -113,6 +117,7 @@ class Cli
                 puts "Thank you for using Covid Traveler to search your destination"
             end
     end
+
 
 
 
