@@ -11,7 +11,62 @@ class Cli
         @final_selection = nil
         @starwars = TTY::Font.new(:starwars)
         @doom = TTY::Font.new(:standard, letter_spacing: 13)
-        @pastel = Pastel.new 
+        @pastel = Pastel.new
+        
+         
+    end
+
+    @@favorite_destinations = []
+    @@favorite_activities = []
+
+    def itinerary_options
+        itinerary_answer = prompt.select(@pastel.green("What would you like to do with your itinerary?"),
+            "Remove destination", "View itinerary", "Main menu")
+            case itinerary_answer
+            when "Remove destination"
+                clear
+                remove_destination
+            when "View itinerary"
+                clear
+                view_itinerary
+                itinerary_options
+            when "Main menu"
+                clear
+                main_menu
+            end
+    end
+
+    def view_itinerary
+        array_check
+        city_name = @@favorite_destinations.map do |location|
+            location.city
+        end
+        prompt.select(@pastel.green("Select city"), city_name)
+    end
+
+    def add_itinerary
+        @@favorite_destinations << @final_destination
+        puts @pastel.bright_red("Added #{@final_destination.city} to itinerary")
+    end
+
+    def remove_destination
+        array_check
+        city_name = @@favorite_destinations.map do |location|
+            location.city
+        end
+        destination_to_remove = prompt.select(@pastel.green("Which destination would you like to remove?"), city_name)
+        @@favorite_destinations = @@favorite_destinations.select do |location|
+            location.city != destination_to_remove
+        end
+        puts @pastel.bright_red("Removed #{destination_to_remove} from itinerary.")
+        itinerary_options
+    end
+
+    def array_check
+        if @@favorite_destinations == []
+            puts @pastel.red.on_blue.bold"You have no itinerary."
+            itinerary_options
+        end
     end
 
     def clear
@@ -86,13 +141,18 @@ class Cli
     end
 
     def main_exit
-        # system `say "Would you like to exit or go back to the main menu?"`
-        choice = prompt.select(@pastel.green('Would you like to exit or go back to the main menu?'), %w(main_menu exit), symbols: { marker: "🌎"} )
-            if choice == "main_menu"
+        # system `say "Would you like to add to itinerary, go to main menu, or exit?"`
+        choice = prompt.select(@pastel.green('Would you like to add to itinerary, go to the main menu, or exit?'), ["main menu", "add to itinerary", "exit"], symbols: { marker: "🌎"} )
+            if choice == "main menu"
                 main_menu
-            else choice == "exit"
-                puts "Thank you for using Covid Traveler to search your destination"
+            elsif choice == "add to itinerary"
+                add_itinerary
+                main_menu
+            elsif choice == "exit"
                 system `say "Thank you for using Covid Traveler to search your destination."`
+                system `say "Don't forget to wear a mask and wash your hands."`
+                puts @pastel.bright_magenta.bold("THANK YOU FOR USING COVID TRAVELER FOR ALL YOUR COVID TRAVELING NEEDS!!!")
+                
             end
     end
 
@@ -104,6 +164,7 @@ class Cli
         select_by_budget
         cityname_giver
         find_destination_by_city_name
+        
         clear
         destination_activities
         main_exit
@@ -146,25 +207,31 @@ class Cli
         main_exit
     end
 
+    
+
 
     def main_menu
         selection = prompt.select(@pastel.green("What would you like to do?"), 
-            {"filter by budget" => 'select by budget',
-             "filter by scene" => 'select by scene',
-              "Help me decide?!" => 'select by budget scene',
-               "browse destination" => "browse all destinations",
-                "exit" => "exit"}, symbols: { marker: "🌎"})
-            if selection == "select by budget"
+            ["Filter by budget",
+             "Filter by scene" ,
+              "Help me decide?!",
+               "Browse destination", 
+               "Itinerary", 
+                "Exit"], symbols: { marker: "🌎"})
+            if selection == "Filter by budget"
                 filter_by_budget
-            elsif selection == "select by scene"
+            elsif selection == "Filter by scene"
                 filter_by_scene
-            elsif selection == "select by budget scene"
+            elsif selection == "Help me decide?!"
                 filter_by_budget_and_scene
-            elsif selection == "browse all destinations"
+            elsif selection == "Browse destination"
                 browse_all_destinations
-            elsif selection == "exit"
+            elsif selection == "Itinerary"
+                itinerary_options
+            elsif selection == "Exit"
                 puts @pastel.cyan("Thank you for using Covid Traveler to search your destination")
                 # system `say "Thank you for using Covid Traveler to search your destination."`
+                # system `say "Don't forget to wear a mask and wash your hands."`
             end
     end
 end
