@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 2020_11_11_180922) do
 
   create_table "catalogs", force: :cascade do |t|
     t.integer "activities_id"
-    t.integer "destinations_id"
+    t.integer "destination_id"
     t.index ["activities_id"], name: "index_catalogs_on_activities_id"
-    t.index ["destinations_id"], name: "index_catalogs_on_destinations_id"
+    t.index ["destination_id"], name: "index_catalogs_on_destination_id"
   end
 
   create_table "destinations", force: :cascade do |t|

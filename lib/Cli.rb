@@ -8,7 +8,6 @@ class Cli
         @budget = nil
     end
 
-
     def welcome
         puts "Welcome to Covid Traveler!!!"
     end
@@ -26,7 +25,6 @@ class Cli
     def ask_budget
         @budget = prompt.slider("What's your budget? 1 = staycation, 10 = YOLO", max: 10, step: 1, symbols: { bullet: "💰"})
     end
-
 
     def display_by_name display
         cities = display.pluck(:city)
@@ -49,16 +47,40 @@ class Cli
         display_by_name select_by_budget
     end
 
-
     def display_destinations_by_scene
         display_by_name select_by_scene
     end 
 
-    def pick_destination_by_budget_scene
+    def select_by_budget_scene
         final_selection = Destination.where(budget: @budget, scene: @scene_selection).or(Destination.where(budget: @budget +1, scene: @scene_selection)).or(Destination.where(budget: @budget -1, scene: @scene_selection))
         display_by_name(final_selection)
     end
     
+
+    def destination_names
+        prompt.select("Please select your city", Destination.all.pluck(:city))
+    end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     def main_exit
         choice = prompt.select('Would you like to exit or go back to the main menu?', %w(main_menu exit))
             if choice == "main_menu"
@@ -70,26 +92,29 @@ class Cli
 
         
     def main_menu
-        selection = prompt.select("What would you like to do?", {"filter by budget" => select_by_budget, "filter by scene" => select_by_scene, "Help me decide?!" => pick_destination_by_budget_scene, "browse destination" => display_all_destinations})
-            if selection == "select_by_budget"
+        selection = prompt.select("What would you like to do?", {"filter by budget" => 'select by budget', "filter by scene" => 'select by scene', "Help me decide?!" => 'select by budget scene', "browse destination" => "browse all destinations", "exit" => "exit"})
+            if selection == "select by budget"
                 ask_budget
                 select_by_budget
                 display_destinations_by_budget
                 main_exit
-            elsif selection == "select_by_scene"
+            elsif selection == "select by scene"
                 ask_scene
                 select_by_scene
                 display_destinations_by_scene
                 main_exit
-            elsif selection == "select_by_budget_and_scene"
+            elsif selection == "select by budget scene"
                 ask_scene
                 ask_budget
-                pick_destination_by_budget_scene
+                select_by_budget_scene
                 main_exit
-            elsif selection == "browse_all_destinations"
+            elsif selection == "browse all destinations"
                 display_all_destinations
                 main_exit
+            elsif selection == "exit"
+                puts "Thank you for using Covid Traveler to search your destination"
             end
+            binding.pry
     end
 
 
