@@ -80,131 +80,131 @@ Activities.create name: 'Safari', mood: 'Adventure'
 Activities.create name: 'Shopping', mood: 'Relaxing' 
 
 
-Catalog.create activities_id: Activities.find_by(name: 'Sky Diving').id, destinations_id: Destination.find_by(city: 'Dubai, UAE').id
-Catalog.create activities_id: Activities.find_by(name: 'Scuba Diving').id, destinations_id: Destination.find_by(city: 'Dubai, UAE').id
-Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destinations_id: Destination.find_by(city: 'Dubai, UAE').id
-Catalog.create activities_id: Activities.find_by(name: 'Helicopter Tour').id, destinations_id: Destination.find_by(city: 'Dubai, UAE').id
-Catalog.create activities_id: Activities.find_by(name: 'Horseback Riding').id, destinations_id: Destination.find_by(city: 'Dubai, UAE').id
-Catalog.create activities_id: Activities.find_by(name: 'Archaeology Tour').id, destinations_id: Destination.find_by(city: 'Petra, Jordan').id
-Catalog.create activities_id: Activities.find_by(name: 'Horseback Riding').id, destinations_id: Destination.find_by(city: 'Petra, Jordan').id
-Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destinations_id: Destination.find_by(city: 'Petra, Jordan').id
-Catalog.create activities_id: Activities.find_by(name: 'Horseback Riding').id, destinations_id: Destination.find_by(city: 'Acapulco, Mexico').id
-Catalog.create activities_id: Activities.find_by(name: 'Night life').id, destinations_id: Destination.find_by(city: 'Acapulco, Mexico').id
-Catalog.create activities_id: Activities.find_by(name: 'Horseback Riding').id, destinations_id: Destination.find_by(city: 'Acapulco, Mexico').id
-Catalog.create activities_id: Activities.find_by(name: 'Massage').id, destinations_id: Destination.find_by(city: 'Acapulco, Mexico').id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: 'Acapulco, Mexico').id
-Catalog.create activities_id: Activities.find_by(name: 'Fine Dining').id, destinations_id: Destination.find_by(city: 'Acapulco, Mexico').id
-Catalog.create activities_id: Activities.find_by(name: 'Fine Dining').id, destinations_id: Destination.find_by(city: 'Male, Maldives').id
-Catalog.create activities_id: Activities.find_by(name: 'Scuba Diving').id, destinations_id: Destination.find_by(city: 'Male, Maldives').id
-Catalog.create activities_id: Activities.find_by(name: 'Spas').id, destinations_id: Destination.find_by(city: 'Male, Maldives').id
-Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destinations_id: Destination.find_by(city: 'Male, Maldives').id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: 'Male, Maldives').id
-Catalog.create activities_id: Activities.find_by(name: 'Rock Climbing').id, destinations_id: Destination.find_by(city: 'Denver, USA').id
-Catalog.create activities_id: Activities.find_by(name: 'Skiing').id, destinations_id: Destination.find_by(city: 'Denver, USA').id
-Catalog.create activities_id: Activities.find_by(name: 'Museums').id, destinations_id: Destination.find_by(city: 'Denver, USA').id
-Catalog.create activities_id: Activities.find_by(name: 'Art Exhibits').id, destinations_id: Destination.find_by(city: 'Denver, USA').id
-Catalog.create activities_id: Activities.find_by(name: 'Wine Tasting').id, destinations_id: Destination.find_by(city: 'Denver, USA').id
-Catalog.create activities_id: Activities.find_by(name: 'Spas').id, destinations_id: Destination.find_by(city: 'Puerto Vallarta, Mexico').id
-Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destinations_id: Destination.find_by(city: 'Puerto Vallarta, Mexico').id
-Catalog.create activities_id: Activities.find_by(name: 'Night life').id, destinations_id: Destination.find_by(city: 'Puerto Vallarta, Mexico').id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: 'Puerto Vallarta, Mexico').id
-Catalog.create activities_id: Activities.find_by(name: 'Archaeology Tour').id, destinations_id: Destination.find_by(city: 'Cairo, Egypt').id
-Catalog.create activities_id: Activities.find_by(name: 'Museums').id, destinations_id: Destination.find_by(city: 'Cairo, Egypt').id
-Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destinations_id: Destination.find_by(city: 'Cairo, Egypt').id
-Catalog.create activities_id: Activities.find_by(name: 'Archaeology Tour').id, destinations_id: Destination.find_by(city: 'Cairo, Egypt').id
-Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destinations_id: Destination.find_by(city: 'Galway, Ireland').id
-Catalog.create activities_id: Activities.find_by(name: 'Wine Tasting').id, destinations_id: Destination.find_by(city: 'Galway, Ireland').id
-Catalog.create activities_id: Activities.find_by(name: 'Rock Climbing').id, destinations_id: Destination.find_by(city: 'Dubrovnik, Croatia').id
-Catalog.create activities_id: Activities.find_by(name: 'Museums').id, destinations_id: Destination.find_by(city: 'Dubrovnik, Croatia').id
-Catalog.create activities_id: Activities.find_by(name: 'Fine Dining').id, destinations_id: Destination.find_by(city: 'Dubrovnik, Croatia').id
-Catalog.create activities_id: Activities.find_by(name: 'Shopping').id, destinations_id: Destination.find_by(city: 'Dubrovnik, Croatia').id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: 'Dubrovnik, Croatia').id
-Catalog.create activities_id: Activities.find_by(name: 'Rock Climbing').id, destinations_id: Destination.find_by(city: 'Cappadocia, Turkey').id
-Catalog.create activities_id: Activities.find_by(name: 'Mud bath').id, destinations_id: Destination.find_by(city: 'Cappadocia, Turkey').id
-Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destinations_id: Destination.find_by(city: 'Cappadocia, Turkey').id
-Catalog.create activities_id: Activities.find_by(name: 'Wine Tasting').id, destinations_id: Destination.find_by(city: 'Cappadocia, Turkey').id
-Catalog.create activities_id: Activities.find_by(name: 'Skiing').id, destinations_id: Destination.find_by(city: 'Belgrade, Serbia').id
-Catalog.create activities_id: Activities.find_by(name: 'Helicopter Tour').id, destinations_id: Destination.find_by(city: 'Belgrade, Serbia').id
-Catalog.create activities_id: Activities.find_by(name: 'Fine Dining').id, destinations_id: Destination.find_by(city: 'Belgrade, Serbia').id
-Catalog.create activities_id: Activities.find_by(name: 'Museums').id, destinations_id: Destination.find_by(city: 'Belgrade, Serbia').id
-Catalog.create activities_id: Activities.find_by(name: 'Biking').id, destinations_id: Destination.find_by(city: 'Belgrade, Serbia').id
-Catalog.create activities_id: Activities.find_by(name: 'Museums').id, destinations_id: Destination.find_by(city: 'Panama City, Panama').id
-Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destinations_id: Destination.find_by(city: 'Panama City, Panama').id
-Catalog.create activities_id: Activities.find_by(name: 'Night life').id, destinations_id: Destination.find_by(city: 'Panama City, Panama').id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: 'Punta Cana, Dominican Republic').id
-Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destinations_id: Destination.find_by(city: 'Punta Cana, Dominican Republic').id
-Catalog.create activities_id: Activities.find_by(name: 'Scuba Diving').id, destinations_id: Destination.find_by(city: 'Punta Cana, Dominican Republic').id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: 'Rio De Janiera, Brazil').id
-Catalog.create activities_id: Activities.find_by(name: 'Art Exhibits').id, destinations_id: Destination.find_by(city: 'Rio De Janiera, Brazil').id
-Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destinations_id: Destination.find_by(city: 'Rio De Janiera, Brazil').id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: "St.John's, Antigua").id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: 'Oranjestad, Aruba').id
-Catalog.create activities_id: Activities.find_by(name: 'Horseback Riding').id, destinations_id: Destination.find_by(city: 'Oranjestad, Aruba').id
-Catalog.create activities_id: Activities.find_by(name: 'Scuba Diving').id, destinations_id: Destination.find_by(city: 'Oranjestad, Aruba').id
-Catalog.create activities_id: Activities.find_by(name: 'Scuba Diving').id, destinations_id: Destination.find_by(city: 'Nassau, Bahamas').id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: 'Nassau, Bahamas').id
-Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destinations_id: Destination.find_by(city: 'Nassau, Bahamas').id
-Catalog.create activities_id: Activities.find_by(name: 'Fine Dining').id, destinations_id: Destination.find_by(city: 'Manama, Bahrain').id
-Catalog.create activities_id: Activities.find_by(name: 'Shopping').id, destinations_id: Destination.find_by(city: 'Manama, Bahrain').id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: 'Bridgetown, Barbados').id
-Catalog.create activities_id: Activities.find_by(name: 'Deep Sea Fishing').id, destinations_id: Destination.find_by(city: 'Bridgetown, Barbados').id
-Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destinations_id: Destination.find_by(city: 'Bridgetown, Barbados').id
-Catalog.create activities_id: Activities.find_by(name: 'Scuba Diving').id, destinations_id: Destination.find_by(city: 'Bridgetown, Barbados').id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: 'Belize City, Belize').id
-Catalog.create activities_id: Activities.find_by(name: 'Shopping').id, destinations_id: Destination.find_by(city: 'Belize City, Belize').id
-Catalog.create activities_id: Activities.find_by(name: 'Zip-lining').id, destinations_id: Destination.find_by(city: 'Belize City, Belize').id
-Catalog.create activities_id: Activities.find_by(name: 'Spas').id, destinations_id: Destination.find_by(city: 'Belize City, Belize').id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: 'Hamilton, Bermuda').id
-Catalog.create activities_id: Activities.find_by(name: 'Deep Sea Fishing').id, destinations_id: Destination.find_by(city: 'Hamilton, Bermuda').id
-Catalog.create activities_id: Activities.find_by(name: 'Biking').id, destinations_id: Destination.find_by(city: 'Sarajevo, Bosnia').id
-Catalog.create activities_id: Activities.find_by(name: 'Spas').id, destinations_id: Destination.find_by(city: 'Sarajevo, Bosnia').id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: 'Cartagena, Colombia').id
-Catalog.create activities_id: Activities.find_by(name: 'Shopping').id, destinations_id: Destination.find_by(city: 'Cartagena, Colombia').id
-Catalog.create activities_id: Activities.find_by(name: 'Bird Watching').id, destinations_id: Destination.find_by(city: 'Cartagena, Colombia').id
-Catalog.create activities_id: Activities.find_by(name: 'Night life').id, destinations_id: Destination.find_by(city: 'Cartagena, Colombia').id
-Catalog.create activities_id: Activities.find_by(name: 'Zip-lining').id, destinations_id: Destination.find_by(city: 'San Jose, Costa Rica').id
-Catalog.create activities_id: Activities.find_by(name: 'Cooking Lessons').id, destinations_id: Destination.find_by(city: 'San Jose, Costa Rica').id
-Catalog.create activities_id: Activities.find_by(name: 'Horseback Riding').id, destinations_id: Destination.find_by(city: 'San Jose, Costa Rica').id
-Catalog.create activities_id: Activities.find_by(name: 'Bird Watching').id, destinations_id: Destination.find_by(city: 'San Jose, Costa Rica').id
-Catalog.create activities_id: Activities.find_by(name: 'Safari').id, destinations_id: Destination.find_by(city: 'Kinshasa, DR Congo').id
-Catalog.create activities_id: Activities.find_by(name: 'Shopping').id, destinations_id: Destination.find_by(city: 'Kinshasa, DR Congo').id
-Catalog.create activities_id: Activities.find_by(name: 'Zip-lining').id, destinations_id: Destination.find_by(city: 'Quito, Ecuador').id
-Catalog.create activities_id: Activities.find_by(name: 'Rock Climbing').id, destinations_id: Destination.find_by(city: 'Quito, Ecuador').id
-Catalog.create activities_id: Activities.find_by(name: 'Mud bath').id, destinations_id: Destination.find_by(city: 'Quito, Ecuador').id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: 'Tahiti, French Polynesia').id
-Catalog.create activities_id: Activities.find_by(name: 'Spas').id, destinations_id: Destination.find_by(city: 'Tahiti, French Polynesia').id
-Catalog.create activities_id: Activities.find_by(name: 'Deep Sea Fishing').id, destinations_id: Destination.find_by(city: 'Tahiti, French Polynesia').id
-Catalog.create activities_id: Activities.find_by(name: 'Archaeology Tour').id, destinations_id: Destination.find_by(city: 'Guatemala City, Guatemala').id
-Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destinations_id: Destination.find_by(city: 'Guatemala City, Guatemala').id
-Catalog.create activities_id: Activities.find_by(name: 'Cooking Lessons').id, destinations_id: Destination.find_by(city: 'Guatemala City, Guatemala').id
-Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destinations_id: Destination.find_by(city: 'Kingston, Jaimaica').id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: 'Kingston, Jaimaica').id
-Catalog.create activities_id: Activities.find_by(name: 'Safari').id, destinations_id: Destination.find_by(city: 'Nairobi, Kenya').id
-Catalog.create activities_id: Activities.find_by(name: 'Cooking Lessons').id, destinations_id: Destination.find_by(city: 'Nairobi, Kenya').id
-Catalog.create activities_id: Activities.find_by(name: 'Fine Dining').id, destinations_id: Destination.find_by(city: 'Nairobi, Kenya').id
-Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destinations_id: Destination.find_by(city: 'Cancun, Mexico').id
-Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destinations_id: Destination.find_by(city: 'Cancun, Mexico').id
-Catalog.create activities_id: Activities.find_by(name: 'Spas').id, destinations_id: Destination.find_by(city: 'Cancun, Mexico').id
-Catalog.create activities_id: Activities.find_by(name: 'Massage').id, destinations_id: Destination.find_by(city: 'Cancun, Mexico').id
-Catalog.create activities_id: Activities.find_by(name: 'Zip-lining').id, destinations_id: Destination.find_by(city: 'Cancun, Mexico').id
-Catalog.create activities_id: Activities.find_by(name: 'Shopping').id, destinations_id: Destination.find_by(city: 'Marrakesh, Morocco').id
-Catalog.create activities_id: Activities.find_by(name: 'Art Exhibits').id, destinations_id: Destination.find_by(city: 'Marrakesh, Morocco').id
-Catalog.create activities_id: Activities.find_by(name: 'Cooking Lessons').id, destinations_id: Destination.find_by(city: 'Marrakesh, Morocco').id
-Catalog.create activities_id: Activities.find_by(name: 'Biking').id, destinations_id: Destination.find_by(city: 'Kumanovo, Macedonia').id
-Catalog.create activities_id: Activities.find_by(name: 'Spas').id, destinations_id: Destination.find_by(city: 'Kumanovo, Macedonia').id
-Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destinations_id: Destination.find_by(city: 'Kigali City, Rwanda').id
-Catalog.create activities_id: Activities.find_by(name: 'Safari').id, destinations_id: Destination.find_by(city: 'Kigali City, Rwanda').id
-Catalog.create activities_id: Activities.find_by(name: 'Bird Watching').id, destinations_id: Destination.find_by(city: 'Kigali City, Rwanda').id
-Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destinations_id: Destination.find_by(city: 'Castries, St.Lucia').id
-Catalog.create activities_id: Activities.find_by(name: 'Rock Climbing').id, destinations_id: Destination.find_by(city: 'Castries, St.Lucia').id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: 'Castries, St.Lucia').id
-Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destinations_id: Destination.find_by(city: 'Victoria, Seychelles').id
-Catalog.create activities_id: Activities.find_by(name: 'Spas').id, destinations_id: Destination.find_by(city: 'Victoria, Seychelles').id
-Catalog.create activities_id: Activities.find_by(name: 'Fine Dining').id, destinations_id: Destination.find_by(city: 'Victoria, Seychelles').id
-Catalog.create activities_id: Activities.find_by(name: 'Helicopter Tour').id, destinations_id: Destination.find_by(city: 'Victoria, Seychelles').id
-Catalog.create activities_id: Activities.find_by(name: 'Safari').id, destinations_id: Destination.find_by(city: 'Dodoma, Tanzania').id
-Catalog.create activities_id: Activities.find_by(name: 'Bird Watching').id, destinations_id: Destination.find_by(city: 'Dodoma, Tanzania').id
-Catalog.create activities_id: Activities.find_by(name: 'Horseback Riding').id, destinations_id: Destination.find_by(city: 'Tashkent, Uzbekistan').id
+Catalog.create activities_id: Activities.find_by(name: 'Sky Diving').id, destination_id: Destination.find_by(city: 'Dubai, UAE').id
+Catalog.create activities_id: Activities.find_by(name: 'Scuba Diving').id, destination_id: Destination.find_by(city: 'Dubai, UAE').id
+Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destination_id: Destination.find_by(city: 'Dubai, UAE').id
+Catalog.create activities_id: Activities.find_by(name: 'Helicopter Tour').id, destination_id: Destination.find_by(city: 'Dubai, UAE').id
+Catalog.create activities_id: Activities.find_by(name: 'Horseback Riding').id, destination_id: Destination.find_by(city: 'Dubai, UAE').id
+Catalog.create activities_id: Activities.find_by(name: 'Archaeology Tour').id, destination_id: Destination.find_by(city: 'Petra, Jordan').id
+Catalog.create activities_id: Activities.find_by(name: 'Horseback Riding').id, destination_id: Destination.find_by(city: 'Petra, Jordan').id
+Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destination_id: Destination.find_by(city: 'Petra, Jordan').id
+Catalog.create activities_id: Activities.find_by(name: 'Horseback Riding').id, destination_id: Destination.find_by(city: 'Acapulco, Mexico').id
+Catalog.create activities_id: Activities.find_by(name: 'Night life').id, destination_id: Destination.find_by(city: 'Acapulco, Mexico').id
+Catalog.create activities_id: Activities.find_by(name: 'Horseback Riding').id, destination_id: Destination.find_by(city: 'Acapulco, Mexico').id
+Catalog.create activities_id: Activities.find_by(name: 'Massage').id, destination_id: Destination.find_by(city: 'Acapulco, Mexico').id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: 'Acapulco, Mexico').id
+Catalog.create activities_id: Activities.find_by(name: 'Fine Dining').id, destination_id: Destination.find_by(city: 'Acapulco, Mexico').id
+Catalog.create activities_id: Activities.find_by(name: 'Fine Dining').id, destination_id: Destination.find_by(city: 'Male, Maldives').id
+Catalog.create activities_id: Activities.find_by(name: 'Scuba Diving').id, destination_id: Destination.find_by(city: 'Male, Maldives').id
+Catalog.create activities_id: Activities.find_by(name: 'Spas').id, destination_id: Destination.find_by(city: 'Male, Maldives').id
+Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destination_id: Destination.find_by(city: 'Male, Maldives').id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: 'Male, Maldives').id
+Catalog.create activities_id: Activities.find_by(name: 'Rock Climbing').id, destination_id: Destination.find_by(city: 'Denver, USA').id
+Catalog.create activities_id: Activities.find_by(name: 'Skiing').id, destination_id: Destination.find_by(city: 'Denver, USA').id
+Catalog.create activities_id: Activities.find_by(name: 'Museums').id, destination_id: Destination.find_by(city: 'Denver, USA').id
+Catalog.create activities_id: Activities.find_by(name: 'Art Exhibits').id, destination_id: Destination.find_by(city: 'Denver, USA').id
+Catalog.create activities_id: Activities.find_by(name: 'Wine Tasting').id, destination_id: Destination.find_by(city: 'Denver, USA').id
+Catalog.create activities_id: Activities.find_by(name: 'Spas').id, destination_id: Destination.find_by(city: 'Puerto Vallarta, Mexico').id
+Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destination_id: Destination.find_by(city: 'Puerto Vallarta, Mexico').id
+Catalog.create activities_id: Activities.find_by(name: 'Night life').id, destination_id: Destination.find_by(city: 'Puerto Vallarta, Mexico').id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: 'Puerto Vallarta, Mexico').id
+Catalog.create activities_id: Activities.find_by(name: 'Archaeology Tour').id, destination_id: Destination.find_by(city: 'Cairo, Egypt').id
+Catalog.create activities_id: Activities.find_by(name: 'Museums').id, destination_id: Destination.find_by(city: 'Cairo, Egypt').id
+Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destination_id: Destination.find_by(city: 'Cairo, Egypt').id
+Catalog.create activities_id: Activities.find_by(name: 'Archaeology Tour').id, destination_id: Destination.find_by(city: 'Cairo, Egypt').id
+Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destination_id: Destination.find_by(city: 'Galway, Ireland').id
+Catalog.create activities_id: Activities.find_by(name: 'Wine Tasting').id, destination_id: Destination.find_by(city: 'Galway, Ireland').id
+Catalog.create activities_id: Activities.find_by(name: 'Rock Climbing').id, destination_id: Destination.find_by(city: 'Dubrovnik, Croatia').id
+Catalog.create activities_id: Activities.find_by(name: 'Museums').id, destination_id: Destination.find_by(city: 'Dubrovnik, Croatia').id
+Catalog.create activities_id: Activities.find_by(name: 'Fine Dining').id, destination_id: Destination.find_by(city: 'Dubrovnik, Croatia').id
+Catalog.create activities_id: Activities.find_by(name: 'Shopping').id, destination_id: Destination.find_by(city: 'Dubrovnik, Croatia').id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: 'Dubrovnik, Croatia').id
+Catalog.create activities_id: Activities.find_by(name: 'Rock Climbing').id, destination_id: Destination.find_by(city: 'Cappadocia, Turkey').id
+Catalog.create activities_id: Activities.find_by(name: 'Mud bath').id, destination_id: Destination.find_by(city: 'Cappadocia, Turkey').id
+Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destination_id: Destination.find_by(city: 'Cappadocia, Turkey').id
+Catalog.create activities_id: Activities.find_by(name: 'Wine Tasting').id, destination_id: Destination.find_by(city: 'Cappadocia, Turkey').id
+Catalog.create activities_id: Activities.find_by(name: 'Skiing').id, destination_id: Destination.find_by(city: 'Belgrade, Serbia').id
+Catalog.create activities_id: Activities.find_by(name: 'Helicopter Tour').id, destination_id: Destination.find_by(city: 'Belgrade, Serbia').id
+Catalog.create activities_id: Activities.find_by(name: 'Fine Dining').id, destination_id: Destination.find_by(city: 'Belgrade, Serbia').id
+Catalog.create activities_id: Activities.find_by(name: 'Museums').id, destination_id: Destination.find_by(city: 'Belgrade, Serbia').id
+Catalog.create activities_id: Activities.find_by(name: 'Biking').id, destination_id: Destination.find_by(city: 'Belgrade, Serbia').id
+Catalog.create activities_id: Activities.find_by(name: 'Museums').id, destination_id: Destination.find_by(city: 'Panama City, Panama').id
+Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destination_id: Destination.find_by(city: 'Panama City, Panama').id
+Catalog.create activities_id: Activities.find_by(name: 'Night life').id, destination_id: Destination.find_by(city: 'Panama City, Panama').id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: 'Punta Cana, Dominican Republic').id
+Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destination_id: Destination.find_by(city: 'Punta Cana, Dominican Republic').id
+Catalog.create activities_id: Activities.find_by(name: 'Scuba Diving').id, destination_id: Destination.find_by(city: 'Punta Cana, Dominican Republic').id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: 'Rio De Janiera, Brazil').id
+Catalog.create activities_id: Activities.find_by(name: 'Art Exhibits').id, destination_id: Destination.find_by(city: 'Rio De Janiera, Brazil').id
+Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destination_id: Destination.find_by(city: 'Rio De Janiera, Brazil').id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: "St.John's, Antigua").id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: 'Oranjestad, Aruba').id
+Catalog.create activities_id: Activities.find_by(name: 'Horseback Riding').id, destination_id: Destination.find_by(city: 'Oranjestad, Aruba').id
+Catalog.create activities_id: Activities.find_by(name: 'Scuba Diving').id, destination_id: Destination.find_by(city: 'Oranjestad, Aruba').id
+Catalog.create activities_id: Activities.find_by(name: 'Scuba Diving').id, destination_id: Destination.find_by(city: 'Nassau, Bahamas').id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: 'Nassau, Bahamas').id
+Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destination_id: Destination.find_by(city: 'Nassau, Bahamas').id
+Catalog.create activities_id: Activities.find_by(name: 'Fine Dining').id, destination_id: Destination.find_by(city: 'Manama, Bahrain').id
+Catalog.create activities_id: Activities.find_by(name: 'Shopping').id, destination_id: Destination.find_by(city: 'Manama, Bahrain').id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: 'Bridgetown, Barbados').id
+Catalog.create activities_id: Activities.find_by(name: 'Deep Sea Fishing').id, destination_id: Destination.find_by(city: 'Bridgetown, Barbados').id
+Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destination_id: Destination.find_by(city: 'Bridgetown, Barbados').id
+Catalog.create activities_id: Activities.find_by(name: 'Scuba Diving').id, destination_id: Destination.find_by(city: 'Bridgetown, Barbados').id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: 'Belize City, Belize').id
+Catalog.create activities_id: Activities.find_by(name: 'Shopping').id, destination_id: Destination.find_by(city: 'Belize City, Belize').id
+Catalog.create activities_id: Activities.find_by(name: 'Zip-lining').id, destination_id: Destination.find_by(city: 'Belize City, Belize').id
+Catalog.create activities_id: Activities.find_by(name: 'Spas').id, destination_id: Destination.find_by(city: 'Belize City, Belize').id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: 'Hamilton, Bermuda').id
+Catalog.create activities_id: Activities.find_by(name: 'Deep Sea Fishing').id, destination_id: Destination.find_by(city: 'Hamilton, Bermuda').id
+Catalog.create activities_id: Activities.find_by(name: 'Biking').id, destination_id: Destination.find_by(city: 'Sarajevo, Bosnia').id
+Catalog.create activities_id: Activities.find_by(name: 'Spas').id, destination_id: Destination.find_by(city: 'Sarajevo, Bosnia').id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: 'Cartagena, Colombia').id
+Catalog.create activities_id: Activities.find_by(name: 'Shopping').id, destination_id: Destination.find_by(city: 'Cartagena, Colombia').id
+Catalog.create activities_id: Activities.find_by(name: 'Bird Watching').id, destination_id: Destination.find_by(city: 'Cartagena, Colombia').id
+Catalog.create activities_id: Activities.find_by(name: 'Night life').id, destination_id: Destination.find_by(city: 'Cartagena, Colombia').id
+Catalog.create activities_id: Activities.find_by(name: 'Zip-lining').id, destination_id: Destination.find_by(city: 'San Jose, Costa Rica').id
+Catalog.create activities_id: Activities.find_by(name: 'Cooking Lessons').id, destination_id: Destination.find_by(city: 'San Jose, Costa Rica').id
+Catalog.create activities_id: Activities.find_by(name: 'Horseback Riding').id, destination_id: Destination.find_by(city: 'San Jose, Costa Rica').id
+Catalog.create activities_id: Activities.find_by(name: 'Bird Watching').id, destination_id: Destination.find_by(city: 'San Jose, Costa Rica').id
+Catalog.create activities_id: Activities.find_by(name: 'Safari').id, destination_id: Destination.find_by(city: 'Kinshasa, DR Congo').id
+Catalog.create activities_id: Activities.find_by(name: 'Shopping').id, destination_id: Destination.find_by(city: 'Kinshasa, DR Congo').id
+Catalog.create activities_id: Activities.find_by(name: 'Zip-lining').id, destination_id: Destination.find_by(city: 'Quito, Ecuador').id
+Catalog.create activities_id: Activities.find_by(name: 'Rock Climbing').id, destination_id: Destination.find_by(city: 'Quito, Ecuador').id
+Catalog.create activities_id: Activities.find_by(name: 'Mud bath').id, destination_id: Destination.find_by(city: 'Quito, Ecuador').id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: 'Tahiti, French Polynesia').id
+Catalog.create activities_id: Activities.find_by(name: 'Spas').id, destination_id: Destination.find_by(city: 'Tahiti, French Polynesia').id
+Catalog.create activities_id: Activities.find_by(name: 'Deep Sea Fishing').id, destination_id: Destination.find_by(city: 'Tahiti, French Polynesia').id
+Catalog.create activities_id: Activities.find_by(name: 'Archaeology Tour').id, destination_id: Destination.find_by(city: 'Guatemala City, Guatemala').id
+Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destination_id: Destination.find_by(city: 'Guatemala City, Guatemala').id
+Catalog.create activities_id: Activities.find_by(name: 'Cooking Lessons').id, destination_id: Destination.find_by(city: 'Guatemala City, Guatemala').id
+Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destination_id: Destination.find_by(city: 'Kingston, Jaimaica').id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: 'Kingston, Jaimaica').id
+Catalog.create activities_id: Activities.find_by(name: 'Safari').id, destination_id: Destination.find_by(city: 'Nairobi, Kenya').id
+Catalog.create activities_id: Activities.find_by(name: 'Cooking Lessons').id, destination_id: Destination.find_by(city: 'Nairobi, Kenya').id
+Catalog.create activities_id: Activities.find_by(name: 'Fine Dining').id, destination_id: Destination.find_by(city: 'Nairobi, Kenya').id
+Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destination_id: Destination.find_by(city: 'Cancun, Mexico').id
+Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destination_id: Destination.find_by(city: 'Cancun, Mexico').id
+Catalog.create activities_id: Activities.find_by(name: 'Spas').id, destination_id: Destination.find_by(city: 'Cancun, Mexico').id
+Catalog.create activities_id: Activities.find_by(name: 'Massage').id, destination_id: Destination.find_by(city: 'Cancun, Mexico').id
+Catalog.create activities_id: Activities.find_by(name: 'Zip-lining').id, destination_id: Destination.find_by(city: 'Cancun, Mexico').id
+Catalog.create activities_id: Activities.find_by(name: 'Shopping').id, destination_id: Destination.find_by(city: 'Marrakesh, Morocco').id
+Catalog.create activities_id: Activities.find_by(name: 'Art Exhibits').id, destination_id: Destination.find_by(city: 'Marrakesh, Morocco').id
+Catalog.create activities_id: Activities.find_by(name: 'Cooking Lessons').id, destination_id: Destination.find_by(city: 'Marrakesh, Morocco').id
+Catalog.create activities_id: Activities.find_by(name: 'Biking').id, destination_id: Destination.find_by(city: 'Kumanovo, Macedonia').id
+Catalog.create activities_id: Activities.find_by(name: 'Spas').id, destination_id: Destination.find_by(city: 'Kumanovo, Macedonia').id
+Catalog.create activities_id: Activities.find_by(name: 'World Heritage Site').id, destination_id: Destination.find_by(city: 'Kigali City, Rwanda').id
+Catalog.create activities_id: Activities.find_by(name: 'Safari').id, destination_id: Destination.find_by(city: 'Kigali City, Rwanda').id
+Catalog.create activities_id: Activities.find_by(name: 'Bird Watching').id, destination_id: Destination.find_by(city: 'Kigali City, Rwanda').id
+Catalog.create activities_id: Activities.find_by(name: 'Party Boat').id, destination_id: Destination.find_by(city: 'Castries, St.Lucia').id
+Catalog.create activities_id: Activities.find_by(name: 'Rock Climbing').id, destination_id: Destination.find_by(city: 'Castries, St.Lucia').id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: 'Castries, St.Lucia').id
+Catalog.create activities_id: Activities.find_by(name: 'Laying at the beach').id, destination_id: Destination.find_by(city: 'Victoria, Seychelles').id
+Catalog.create activities_id: Activities.find_by(name: 'Spas').id, destination_id: Destination.find_by(city: 'Victoria, Seychelles').id
+Catalog.create activities_id: Activities.find_by(name: 'Fine Dining').id, destination_id: Destination.find_by(city: 'Victoria, Seychelles').id
+Catalog.create activities_id: Activities.find_by(name: 'Helicopter Tour').id, destination_id: Destination.find_by(city: 'Victoria, Seychelles').id
+Catalog.create activities_id: Activities.find_by(name: 'Safari').id, destination_id: Destination.find_by(city: 'Dodoma, Tanzania').id
+Catalog.create activities_id: Activities.find_by(name: 'Bird Watching').id, destination_id: Destination.find_by(city: 'Dodoma, Tanzania').id
+Catalog.create activities_id: Activities.find_by(name: 'Horseback Riding').id, destination_id: Destination.find_by(city: 'Tashkent, Uzbekistan').id
 
 
 
