@@ -70,7 +70,7 @@ class Cli
 
         
     def main_menu
-        selection = prompt.select("What would you like to do?", %w( select_by_budget select_by_scene select_by_budget_and_scene browse_all_destinations))
+        selection = prompt.select("What would you like to do?", {"filter by budget" => select_by_budget, "filter by scene" => select_by_scene, "Help me decide?!" => pick_destination_by_budget_scene, "browse destination" => display_all_destinations})
             if selection == "select_by_budget"
                 ask_budget
                 select_by_budget
