@@ -13,6 +13,7 @@ class Cli
         @doom = TTY::Font.new(:standard, letter_spacing: 13)
         @pastel = Pastel.new
         @answer = nil
+
     end
 
     @@favorite_destinations = []
@@ -164,14 +165,14 @@ end
 
     def start_app
         welcome()
-        sleep(2)
+        sleep(5)
         clear
         main_menu()
     end
 
     def welcome
-        puts @pastel.yellow(@doom.write("COVID"))
-        puts @pastel.red(@starwars.write("Traveler"))
+        puts @pastel.bold.yellow(@doom.write("COVID"))
+        puts @pastel.bold.red(@starwars.write("Traveler"))
         puts @pastel.bright_blue('Welcome to Covid Traveler!!!')
         puts @pastel.bright_blue( "We're here to help you find your next destination during these unprecedented times.")
         system `say "Welcome to Covid Traveler!!!"`
