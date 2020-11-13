@@ -22,7 +22,7 @@ class Cli
 
     def start_app
         welcome()
-        sleep(4)
+        sleep(5)
         clear
         main_menu()
     end
@@ -53,7 +53,7 @@ class Cli
     end
 
 def main_exit
-    choice = prompt.select(@pastel.green('Would you like to add to itinerary, go to the main menu, or exit?'), ["main menu", "add to itinerary", "exit"], symbols: { marker: "🌎"} )
+    choice = prompt.select(@pastel.green('Would you like to add to itinerary, go to the main menu, or exit?'), ["main menu", "add to itinerary", "exit"], symbols: { marker: "🌎"})
         if choice == "main menu"
             clear
             main_menu
@@ -73,7 +73,7 @@ end
 
     def itinerary_options
         itinerary_answer = prompt.select(@pastel.green("What would you like to do with your itinerary?"),
-            "Remove destination", "View itinerary", "Add activity", "Remove activity", "Main menu")
+            "Remove destination", "View itinerary", "Add activity", "Remove activity", "Main menu", symbols: { marker: "🛩"})
             case itinerary_answer
             when "Remove destination"
                 clear
@@ -104,7 +104,7 @@ end
         array_check
         activities_of_current_favorite_destinations
         answer = @answer.map {|activity| activity.name }
-        favorite_activity = prompt.select(@pastel.green('Please select the activity you would like to add'), answer )
+        favorite_activity = prompt.select(@pastel.green('Please select the activity you would like to add'), answer, symbols: { marker: "🏐"})
         @@favorite_activities << favorite_activity
         puts @pastel.red("#{favorite_activity} was added to activities")
     end
@@ -122,7 +122,7 @@ end
             location.city
         end
         it_view = city_name.concat(@@favorite_activities)
-        prompt.select(@pastel.green("Select city"), it_view)
+        prompt.select(@pastel.green("Select city"), it_view, symbols: { marker: "🌎"})
     end
 
     def add_itinerary
@@ -136,7 +136,7 @@ end
         city_name = @@favorite_destinations.map do |location|
             location.city
         end
-        destination_to_remove = prompt.select(@pastel.green("Which destination would you like to remove?"), city_name)
+        destination_to_remove = prompt.select(@pastel.green("Which destination would you like to remove?"), city_name, symbols: { marker: "🌎"})
         @@favorite_destinations = @@favorite_destinations.select do |location|
             location.city != destination_to_remove
         end
@@ -161,15 +161,7 @@ end
     def clear
         system "clear"
     end
-
-
-    def start_app
-        welcome()
-        sleep(5)
-        clear
-        main_menu()
-    end
-
+  
     def welcome
         puts @pastel.bold.yellow(@doom.write("COVID"))
         puts @pastel.bold.red(@starwars.write("Traveler"))
@@ -180,7 +172,7 @@ end
 
     def ask_scene
         system `say "What's your scene?"`
-        @scene_selection = prompt.select(@pastel.green("What's your scene?"), %w(beach mountain desert country-side), symbols: { marker: "🌎"})
+        @scene_selection = prompt.select(@pastel.green("What's your scene?"), %w(beach mountain desert country-side), symbols: { marker: "🏝"})
     end
 
     def ask_budget
