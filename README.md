@@ -68,9 +68,7 @@ In the itinerary there are several options
 ```
 
 ## Demo Video
-
-## Demo gifs
-
+    This is where you can find the demo video. [Click here](https://youtu.be/6FClE8KDXso)
 ### Contributers 
 
 @kosmos02 and @Allen70 contributed to this project.
