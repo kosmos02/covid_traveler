@@ -10,7 +10,7 @@ Destination.create city: 'Denver, USA', scene: 'mountain', budget: 4
 Destination.create city: 'Puerto Vallarta, Mexico', scene: 'beach', budget: 4
 Destination.create city: 'Cairo, Egypt', scene: 'desert', budget: 2
 Destination.create city: 'Galway, Ireland', scene: "country-side", budget: 4
-Destination.create city: 'Dubrovnik, Croatia', scene: 'mountain', budget: 4
+Destination.create city: 'Dubrovnik, Croatia', scene: 'mountain', budget: 7
 Destination.create city: 'Cappadocia, Turkey', scene: 'mountain', budget: 5
 Destination.create city: 'Belgrade, Serbia', scene: 'mountain', budget: 3
 Destination.create city: "Panama City, Panama", scene: 'city', budget: 3
