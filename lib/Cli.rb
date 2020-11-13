@@ -161,7 +161,7 @@ end
     def clear
         system "clear"
     end
-
+  
     def welcome
         puts @pastel.bold.yellow(@doom.write("COVID"))
         puts @pastel.bold.red(@starwars.write("Traveler"))
